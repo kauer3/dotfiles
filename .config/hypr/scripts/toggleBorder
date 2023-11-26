@@ -1,0 +1,9 @@
+#!/bin/bash
+
+size=$(hyprctl getoption general:border_size | awk 'NR==2{print $2;exit}')
+
+if [ "$size" == 0 ]; then
+	hyprctl --batch "keyword general:border_size 2 ; keyword general:col.active_border rgba(FF007Fff) rgba(FF86C8ff) rgba(7F96FFff) rgba(540D6Eff) rgba(F7B801ff) rgba(FF521Bff) 275deg"
+else
+	hyprctl --batch "keyword general:border_size 0 ; keyword general:col.active_border rgba(00000000)"
+fi

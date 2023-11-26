@@ -1,0 +1,9 @@
+#!/bin/bash
+
+size=$(hyprctl getoption decoration:blur:passes | awk 'NR==2{print $2;exit}')
+
+if [ "$size" == 1 ]; then
+	hyprctl --batch "keyword decoration:active_opacity 0.93 ; keyword decoration:inactive_opacity 0.85 ; keyword decoration:blur:size 15 ; keyword decoration:blur:passes 3"
+else
+	hyprctl --batch "keyword decoration:active_opacity 0.93 ; keyword decoration:inactive_opacity 0.7 ; keyword decoration:blur:size 30 ; keyword decoration:blur:passes 1"
+fi

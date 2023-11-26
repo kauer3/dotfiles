@@ -1,0 +1,4 @@
+#!/bin/bash
+
+COLOR=$(hyprpicker --no-fancy | wl-copy --trim-newline)
+notify-send "Color copied to clipboard"

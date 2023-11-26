@@ -1,0 +1,30 @@
+#!/bin/bash
+
+current_file=$(swww query | cut -d'"' -f 2)
+wallpaper_dir="$HOME/Pictures/wallpapers"
+
+random_wallpaper=$(ls $wallpaper_dir -1 | shuf -n 1)
+
+while [ $random_wallpaper == $current_file ]; do
+	random_wallpaper=$(ls $wallpaper_dir -1 | shuf -n 1)
+done
+
+transition_types=("any" "wipe" "wave")
+type=${transition_types[$RANDOM % 3]}
+args="--transition-type $type --transition-fps 144"
+
+if [[ $type != "any" ]]; then
+	angle=$(($RANDOM % 361))
+	args="$args --transition-angle $angle"
+	if [[ $type == "wave" ]]; then
+		wave_height=$(($RANDOM % 30 + 15))
+		wave_width=$(($RANDOM % 15 + $wave_height))
+		args="$args --transition-wave $wave_width,$wave_height"
+	fi
+fi
+
+if [[ $random_wallpaper == *.gif ]]; then
+	args="$args --transition-duration 1.3 --transition-bezier 0.56,0.95,0.67,0.5"
+fi
+
+swww img $wallpaper_dir/$random_wallpaper $args

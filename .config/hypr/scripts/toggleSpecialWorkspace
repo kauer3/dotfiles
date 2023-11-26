@@ -1,0 +1,13 @@
+#!/bin/bash
+
+classToCheckFor=$(pgrep -a kitty | rg "$1")
+
+echo $classToCheckFor
+if [ -n "${classToCheckFor}" ];
+then
+	echo "already running"
+	hyprctl dispatch togglespecialworkspace $1
+else
+	echo "launching"
+	kitty --class $1 -e $2
+fi

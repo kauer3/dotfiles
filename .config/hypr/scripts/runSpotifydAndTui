@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! $(pgrep "spotifyd") ];
+then
+	/home/cataue/.cargo/bin/spotifyd
+fi
+
+/home/cataue/.cargo/bin/spt
