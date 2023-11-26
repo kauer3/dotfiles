@@ -3,20 +3,20 @@
 [username]
 format = " [╭─](bold dimmed red)[$user]($style)[@](bold dimmed blue)"
 style_user = "bold red"
-style_root = "bold red"
+style_root = "bold magenta"
 show_always = true
 
 # Third param
 [hostname]
-format = "[nz]($style) in "
-style = "bold dimmed yellow"
+format = "[nz]($style) [in](bold #eeeeee) "
+style = "bold yellow"
 trim_at = "-"
 ssh_only = false
 disabled = false
 
 # Fourth param
 [directory]
-style = "bold dimmed purple"
+style = "bold purple"
 truncation_length = 0
 truncate_to_repo = true
 truncation_symbol = "repo: "
