@@ -12,9 +12,9 @@ theme:
   inactive: LightYellow              # borders of inactive panes
   playbar_background: Reset          # background of progress bar
   playbar_progress: LightYellow        # filled-in part of the progress bar
-  playbar_progress_text: Red # song length and time played/left
+  playbar_progress_text: LightRed # song length and time played/left
                                        # indicator in the progress bar
-  playbar_text: Blue          # artist name in player pane
+  playbar_text: LightRed          # artist name in player pane
   selected: Red               # a) selected pane border, b) hovered item
                                        # in list, & c) track title in player
   text: Yellow                  # text in panes
