@@ -1,29 +1,29 @@
 ## FIRST LINE/ROW: Info & Status
 # First param ─┌
 [username]
-format = " [╭─](bold dimmed #cc241d)[$user]($style)[@](bold dimmed blue)"
-style_user = "bold #cc241d"
+format = " [╭─](bold dimmed #fb4934)[$user]($style)[@](bold #83a598)"
+style_user = "bold #fb4934"
 style_root = "bold magenta"
 show_always = true
 
 # Third param
 [hostname]
-format = "[nz]($style) [in](bold #eeeeee) "
-style = "bold yellow"
+format = "[nz]($style) [in](bold #ebdbb2) "
+style = "bold #fabd2f"
 trim_at = "-"
 ssh_only = false
 disabled = false
 
 # Fourth param
 [directory]
-style = "bold purple"
+style = "bold #d3869b"
 truncation_length = 0
 truncate_to_repo = true
 truncation_symbol = "repo: "
 
 # Before all the version info (python, nodejs, php, etc.)
 [git_status]
-style = "white"
+style = "#ebdbb2"
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
@@ -44,9 +44,9 @@ charging_symbol = " "
 discharging_symbol = " "
 disabled = true
 
-[[battery.display]]  # "bold #cc241d" style when capacity is between 0% and 10%
+[[battery.display]]  # "bold #fb4934" style when capacity is between 0% and 10%
 threshold = 15
-style = "bold #cc241d"
+style = "bold #fb4934"
 disabled = true
 
 [[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
@@ -68,9 +68,9 @@ disabled = true
 
 # Prompt: param 2 └─
 [character]
-success_symbol = " [╰─](bold dimmed #cc241d)[λ](bold #cc241d)"
-error_symbol = " [×](bold #cc241d)"
-# vimcmd_symbol = " [╰─](bold dimmed #cc241d)[](bold green)"
+success_symbol = " [╰─](bold dimmed #fb4934)[λ](bold #fb4934)"
+error_symbol = " [×](bold #fb4934)"
+# vimcmd_symbol = " [╰─](bold dimmed #fb4934)[](bold green)"
 
 # SYMBOLS
 [status]
