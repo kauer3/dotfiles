@@ -8,7 +8,7 @@ show_always = true
 
 # Third param
 [hostname]
-format = "[nz]($style) [in](bold #ebdbb2) "
+format = "[nz]($style) [in](#ebdbb2) "
 style = "bold #fabd2f"
 trim_at = "-"
 ssh_only = false
