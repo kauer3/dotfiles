@@ -1,8 +1,8 @@
 ## FIRST LINE/ROW: Info & Status
 # First param ─┌
 [username]
-format = " [╭─](bold dimmed red)[$user]($style)[@](bold dimmed blue)"
-style_user = "bold red"
+format = " [╭─](bold dimmed #cc241d)[$user]($style)[@](bold dimmed blue)"
+style_user = "bold #cc241d"
 style_root = "bold magenta"
 show_always = true
 
@@ -44,9 +44,9 @@ charging_symbol = " "
 discharging_symbol = " "
 disabled = true
 
-[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+[[battery.display]]  # "bold #cc241d" style when capacity is between 0% and 10%
 threshold = 15
-style = "bold red"
+style = "bold #cc241d"
 disabled = true
 
 [[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
@@ -68,9 +68,9 @@ disabled = true
 
 # Prompt: param 2 └─
 [character]
-success_symbol = " [╰─](bold dimmed red)[λ](bold red)"
-error_symbol = " [×](bold red)"
-# vimcmd_symbol = " [╰─](bold dimmed red)[](bold green)"
+success_symbol = " [╰─](bold dimmed #cc241d)[λ](bold #cc241d)"
+error_symbol = " [×](bold #cc241d)"
+# vimcmd_symbol = " [╰─](bold dimmed #cc241d)[](bold green)"
 
 # SYMBOLS
 [status]
