@@ -28,7 +28,7 @@ if [ -x /usr/bin/dircolors ]; then
 	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 	alias ls='eza --icons --no-user --group-directories-first --sort mod -lr'
 	# alias cat=bat
-	alias cat=catbat # on some distros 'bat' cmd is already taken, so catbat is used
+	alias cat=batcat # on some distros 'bat' cmd is already taken, so catbat is used
 	alias dir='dir --color=auto'
 	alias vdir='vdir --color=auto'
 
